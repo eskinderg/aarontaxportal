@@ -55,8 +55,6 @@
           @if(Auth::check())
               <ul class="nav navbar-nav navbar-right">
                   <li>
-                    <a href="{{route('admin')}}">Messages <span class="badge">{{ Auth::user()->messages()->count() }}</span>
-                    </a>
                   </li>
               </ul>
           @endif

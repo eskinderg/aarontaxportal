@@ -25,3 +25,11 @@ Route::group(['prefix'=>'auth','namespace'=>'Auth'],function(){
     Route::get('register', ['as'=>'auth.register','uses'=>'AuthController@getRegister']);
     Route::post('register', 'AuthController@postRegister');
 });
+
+
+
+Route::group(['middleware' => 'auth'], function()
+{
+        Route::get('profile',['as'=>'profile', 'uses'=> 'profileController@index']);
+        Route::post('profile/{pid}',['as'=>'profile.update','uses'=>'profileController@update']);
+});
