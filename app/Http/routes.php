@@ -32,4 +32,5 @@ Route::group(['middleware' => 'auth'], function()
 {
         Route::get('profile',['as'=>'profile', 'uses'=> 'profileController@index']);
         Route::post('profile/{pid}',['as'=>'profile.update','uses'=>'profileController@update']);
+        Route::get('document',['as'=>'document','uses'=>'documentContoller@index']);
 });
