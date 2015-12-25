@@ -12,5 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Home');
+});
+
+
+
+Route::get('home',['as'=>'home','uses'=>'home@index']);
+
+
+/* Authentication namespace */
+Route::group(['prefix'=>'auth','namespace'=>'Auth'],function(){
+    // Authentication routes...
+    Route::get('login',['as'=>'auth.login','uses'=>'AuthController@getLogin']);
+    Route::post('login', 'AuthController@postLogin');
+    Route::get('logout',['as'=>'auth.logout','uses'=>'AuthController@getLogout']);
+    // Registration routes...
+    Route::get('register', ['as'=>'auth.register','uses'=>'AuthController@getRegister']);
+    Route::post('register', 'AuthController@postRegister');
 });
