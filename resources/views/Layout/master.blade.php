@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<html lang="eng"  ng-app="todoApp">
+<html lang="eng"  ng-app="app">
 
   <head>
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
 
-    {!! HTML::script('scripts/App/App.js') !!}
+    {!! HTML::script('scripts/app.js') !!}
 
     {!! HTML::style('css/style.css')!!}
 

@@ -11,14 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('Home');
-});
-
-
+Route::get('/',['uses'=>'home@index']);
 
 Route::get('home',['as'=>'home','uses'=>'home@index']);
-
 
 /* Authentication namespace */
 Route::group(['prefix'=>'auth','namespace'=>'Auth'],function(){
