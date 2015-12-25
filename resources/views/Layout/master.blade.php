@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
 
-    {!! HTML::script('scripts/app.js') !!}
+    {!! HTML::script('scripts/all.js') !!}
 
     {!! HTML::style('css/app.css')!!}
 
@@ -26,7 +26,7 @@
 
   <body style="padding-top:60px;">
    <header>
-        @include('layout.header')
+        @include('layout.navbar')
    </header>
 
     <div class='container'>
