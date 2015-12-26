@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+
+use Validator;
 
 use App\Http\Requests;
+use Request;
 use App\Http\Controllers\Controller;
 
 class documentContoller extends Controller
@@ -84,4 +87,36 @@ class documentContoller extends Controller
     {
         //
     }
+
+    public function upload(Request $request)
+    {
+      //dd($request->files);
+         $files = Request::file();
+          $names = [];
+          $file_count = count($files);
+          $uploadcount = 0;
+
+          foreach ($files as $file)
+          {
+               $rules = array('file' => 'required'); //'required|mimes:png,gif,jpeg,txt,pdf,doc'
+               $validator = Validator::make(array('file'=> $file), $rules);
+                 if($validator->passes())
+                 {
+                      $destinationPath = 'uploads';
+                      $filename = $file->getClientOriginalName();
+                      $upload_success = $file->move($destinationPath, $filename);
+                      $uploadcount ++;
+                  }
+          }
+
+         if($uploadcount == $file_count)
+            {
+               \Session::flash('success', 'Upload successfully');
+               //return Redirect::to('upload');
+            }
+            else
+            {
+               //return Redirect::to('upload')->withInput()->withErrors($validator);
+            }
+   }
 }

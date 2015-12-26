@@ -3,6 +3,7 @@
 <html lang="eng"  ng-app="app">
 
   <head>
+     <meta name="csrf-token" content='<?php echo csrf_token(); ?>'>
     <meta charset="utf-8">
     <title>Portal</title>
     <meta name="viewport" content="width=device-width">
@@ -21,6 +22,9 @@
     {!! HTML::script('scripts/all.js') !!}
 
     {!! HTML::style('css/app.css')!!}
+
+    {!! HTML::script('scripts/app.js')!!}
+
 
   </head>
 
