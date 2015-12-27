@@ -11,8 +11,9 @@
             </ul>
         </div>
     @endif
-<div style="margin-top:10px;">
-    {!! Form::model($user,['class'=>'form-horizontal','route'=>['profile.update',$user->id]]) !!}
+<div style="margin:10px;">
+
+    {!! Form::model($user,['class'=>'form-horizontal','style'=>'width:50%','route'=>['profile.update',$user->id]]) !!}
 
 
           <div class="form-group">
@@ -58,5 +59,6 @@
 
 
     {!! Form::close() !!}
+
 </div>
 @endsection
