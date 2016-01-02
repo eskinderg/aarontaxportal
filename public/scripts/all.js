@@ -125,7 +125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    queue: [],
 	    progress: 0,
 	    autoUpload: false,
-	    removeAfterUpload: false,
+	    removeAfterUpload: true,
 	    method: "POST",
 	    filters: [],
 	    formData: [],
@@ -2004,4 +2004,5 @@ return /******/ (function(modules) { // webpackBootstrap
 });
 ;
 //# sourceMappingURL=angular-file-upload.js.map
+
 //# sourceMappingURL=all.js.map

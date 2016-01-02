@@ -15,8 +15,8 @@ elixir(function(mix) {
 
     mix.sass('app.scss')
       .copy('node_modules/bootstrap-sass/assets/fonts', 'public/fonts')
-      .copy('node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', 'resources/assets/js')
-      .copy('bower_components/angular-file-upload/dist/angular-file-upload.js', 'resources/assets/js');
+      .copy('node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', 'resources/assets/js');
+      //.copy('bower_components/angular-file-upload/dist/angular-file-upload.js', 'resources/assets/js');
 
       mix.scripts(['bootstrap.min.js','angular-file-upload.js'],'public/scripts/all.js');
 
