@@ -118,7 +118,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    queue: [],
 	    progress: 0,
 	    autoUpload: false,
-	    removeAfterUpload: true,
+	    removeAfterUpload: false,
 	    method: "POST",
 	    filters: [],
 	    formData: [],

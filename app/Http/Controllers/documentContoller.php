@@ -24,6 +24,18 @@ class documentContoller extends Controller
       return view("document.index");
     }
 
+   public function listdocs()
+   {
+      $currentUser = null;
+        if (Auth::check())
+          {
+              $currentUser = Auth::user();
+          }
+       //$messages = \Social\User::find($currentUser->id)->messages;
+      return view('document.list')->with('currentUser',$currentUser);
+   }
+
+
     public function upload(Request $request)
     {
       //dd($request->files);
@@ -62,4 +74,6 @@ class documentContoller extends Controller
                //return Redirect::to('upload')->withInput()->withErrors($validator);
             }
    }
+
+
 }

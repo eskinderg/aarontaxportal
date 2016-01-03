@@ -41,6 +41,13 @@
                       </a>
                     </li>
 
+                    <li>
+                      <a href="{{ route('document.listdocs')}}">
+                        <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                        Documents
+                      </a>
+                    </li>
+
 
 
                         <li>
