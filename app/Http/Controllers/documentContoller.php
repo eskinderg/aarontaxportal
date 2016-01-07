@@ -35,6 +35,11 @@ class documentContoller extends Controller
       return view('document.list')->with('currentUser',$currentUser);
    }
 
+   public function delete($id)
+   {
+      Auth::user()->documents()->find($id)->delete();
+      return redirect('document/listdocs');
+   }
 
     public function upload(Request $request)
     {

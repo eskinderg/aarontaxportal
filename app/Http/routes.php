@@ -35,4 +35,6 @@ Route::group(['middleware' => 'auth'], function()
         Route::get('document',['as'=>'document','uses'=>'documentContoller@index']);
         Route::post('document',['as'=>'document.upload','uses'=>'documentContoller@upload']);
         Route::get('document/listdocs',['as'=>'document.listdocs','uses'=>'documentContoller@listdocs']);
+        Route::get('document/delete/{id}',['as'=>'document.delete','uses'=>'documentContoller@delete']);
+
 });
