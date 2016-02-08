@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 
-<html lang="eng"  ng-app="app">
+<html lang="eng">
 
   <head>
+      <base href="/aarontaxportal/public/"> 
      <meta name="csrf-token" content='<?php echo csrf_token(); ?>'>
     <meta charset="utf-8">
     <title>Portal</title>
@@ -13,8 +14,14 @@
     <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
 
+   <!---Angular 2 Includes -------------------------------------------------------->
 
 
+
+       {!! HTML::script('scripts/Angular2Dependencies/Angular2All.js') !!}
+
+
+   <!------------------------------------------------------------------------------>
 
 
 
@@ -30,16 +37,18 @@
   </head>
 
   <body style="padding-top:60px;">
-   <header>
-        @include('layout.navbar')
-   </header>
 
-    <div class='container'>
+         <header>
+              @include('layout.navbar')
+         </header>
 
-        @include('partials.flash')
+          <div class='container'>
+            <my-app>
+              @include('partials.flash')
 
-        @yield('content')
-    </div>
+              @yield('content')
+            </my-app>
+           </div>
 
 
   </body>

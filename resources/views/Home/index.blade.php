@@ -13,9 +13,12 @@
           {{-- $currentUser->messages --}}
   @endif
 
+
   <div ng-controller="homecontroller">
-     
+
   </div>
+
+
 
 
 {!! HTML::script('scripts/controllers/homecontroller.js') !!}

@@ -21,4 +21,19 @@ elixir(function(mix) {
       mix.scripts(['bootstrap.min.js','angular-file-upload.js','filelist.js'],
                      'public/scripts/all.js');
 
+
+
+/* includes for angular 2 ----------------------------------------------*/
+
+      mix.scripts(['../../../node_modules/angular2/bundles/angular2-polyfills.js',
+                  '../../../node_modules/systemjs/dist/system.src.js',
+                  '../../../node_modules/rxjs/bundles/Rx.js',
+                  '../../../node_modules/angular2/bundles/angular2.dev.js',
+                  '../../../node_modules/angular2/bundles/router.dev.js',
+                  '../../../public/angular.config.js']
+         ,'public/scripts/Angular2Dependencies/Angular2All.js');
+
+/*-----------------------------------------------------------------------------*/
+
+
 });

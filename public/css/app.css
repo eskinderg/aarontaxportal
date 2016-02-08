@@ -5755,6 +5755,9 @@ html
    background: red;
 }
 */
+html {
+  overflow-y: scroll; }
+
 .inputfile {
   position: absolute;
   top: 0px;
